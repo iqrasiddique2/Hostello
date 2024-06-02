@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="34"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:allowBackup="true"
+        android:appCategory="audio"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/circlenwlogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/circlenwlogo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApp"
+        tools:targetApi="31" >
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/circlenwlogo" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/lightpurp" />
+
+
+        <activity
+            android:name=".rooomstatus"
+            android:exported="false" />
+        <activity
+            android:name=".roomform_subsuccessfully"
+            android:exported="false" />
+        <activity
+            android:name=".room_form"
+            android:exported="false" />
+        <activity
+            android:name=".forum"
+            android:exported="false"
+            android:label="@string/title_activity_forum"
+            android:theme="@style/Theme.MyApp" />
+
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+
+        <activity
+            android:name=".lnf_submitted_successfully"
+            android:exported="false" />
+        <activity
+            android:name=".lost_and_found_form"
+            android:exported="false" />
+        <activity
+            android:name=".complainform"
+            android:exported="false" />
+        <activity
+            android:name=".Complain_Submitted_successfully"
+            android:exported="false" />
+        <activity
+            android:name=".lost_n_found_status_check"
+            android:exported="false" />
+        <activity
+            android:name=".lost_and_found_form"
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".Status_form"
+            android:exported="false" />
+
+        <service
+            android:name=".forum"
+            android:exported="true" />
+
+        <activity
+            android:name=".lost_n_found_check"
+            android:exported="false" />
+        <activity
+            android:name=".check_complain_status"
+            android:exported="false" />
+        <activity
+            android:name=".complainform"
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".Leave_submitted_successfully"
+            android:exported="false" />
+        <activity
+            android:name=".Leave_form"
+            android:exported="false" />
+        <activity
+            android:name=".Fees_details"
+            android:exported="false" />
+        <activity
+            android:name=".applyroomchange_check"
+            android:exported="false" />
+        <activity
+            android:name=".raisecomplain_check"
+            android:exported="false" />
+        <activity
+            android:name=".applyleave_check"
+            android:exported="false" />
+        <activity
+            android:name=".Noticeboard"
+            android:exported="false" />
+        <activity
+            android:name=".welcomepage"
+            android:exported="false" />
+        <activity
+            android:name=".Splash"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Signuppage"
+            android:exported="false" />
+        <activity
+            android:name=".Login_Page"
+            android:exported="false" />
+
+
+    </application>
+
+</manifest>
